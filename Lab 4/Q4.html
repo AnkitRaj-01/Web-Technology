@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Q4</title>
+    </head>
+    <body>
+        
+        <main>
+            <h1>Main</h1>
+            <p>This is my main content.</p>
+        </main>
+        <button onclick = "changeFunc();">Magic</button>
+        <script type="text/javascript">
+            changeFunc=function(){
+                var myMain;
+                document.body.style.backgroundColor ="green";
+                myMain=document.querySelector('main');
+                myMain.innerHTML="<h2>Main section is replaced.</h2>";
+                myMain.style.height="100px";
+                myMain.style.width="40%";
+                myMain.style.backgroundColor="aqua";
+            }
+        </script>
+    </body>
+</html>

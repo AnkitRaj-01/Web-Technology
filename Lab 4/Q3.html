@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Q3</title>
+        <style>
+            .myclass{
+                background-color: aqua;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Heading</h1>
+        <button onclick = "changeFunc();">Magic</button>
+        <script type="text/javascript">
+            changeFunc=function(){
+                alert("Body has class ="+document.body.className);
+                document.body.className="myclass";
+                alert("Body has class ="+document.body.className);
+                document.body.innerHTML="<h1> Magic changed the Heading.</h1>";
+            }
+        </script>
+    </body>
+</html>
