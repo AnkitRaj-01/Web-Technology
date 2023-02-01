@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>Q5</title>
+    </head>
+    <body>
+        <label for="">Enter the first number  :</label>
+        <input type="text" id="n1"><br><br>
+        <label for="">Enter the second number :</label>
+        <input type="text"  id="n2"><br>
+        <br>
+        <button onclick="Addition()">+</button>
+        <button onclick="Subtraction()">-</button>
+        <button onclick="Multiplication()">*</button>
+        <button onclick="Division()">/</button>
+        <br><br>
+        <h3 class="new">
+
+        </h1>
+        <script>
+            n1=document.querySelector("#n1");
+            n2=document.querySelector("#n2");
+            
+            new_1=document.querySelector(".new");
+            Addition=function(){
+                n11=Number.parseInt(n1.value);
+                n22=Number.parseInt(n2.value);
+                var a=n11+n22;
+                new_1.innerHTML="Addition = "+a;                 
+            
+            }
+            Subtraction=function(){
+                n11=Number.parseInt(n1.value);
+                n22=Number.parseInt(n2.value);
+                var s=n11-n22;
+                new_1.innerHTML="Subtraction = "+s;
+
+            }
+            Multiplication=function(){
+                n11=Number.parseInt(n1.value);
+                n22=Number.parseInt(n2.value);
+                var m=n11*n22;
+                new_1.innerHTML="Multiplication = "+m;
+
+            }
+            Division=function(){
+                n11=Number.parseInt(n1.value);
+                n22=Number.parseInt(n2.value);
+                var d=n11/n22;
+                new_1.innerHTML="Division = "+d;
+
+            }          
+
+        </script>      
+    </body>
+</html>
+
+
+

@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Q3</title>
+    </head>
+
+    <body>
+        <h1>List :-</h1>
+        <ul class="list">   
+        </ul>
+        <button onclick="add()">Magic</button>
+        <script>
+
+            var c=1;
+            var ts=15
+
+
+            add=function(){
+                list1=document.querySelector(".list");
+                lis=document.createElement("li");
+                lis.innerText="number "+ c ;
+                lis.style.fontSize=ts+"px";
+                c=c+1
+                ts=ts+10
+                list1.appendChild(lis);
+
+            }
+
+
+        </script>
+
+
+    </body>
+</html>

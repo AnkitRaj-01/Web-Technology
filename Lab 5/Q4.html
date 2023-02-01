@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Q4</title>
+    </head>
+    <body>
+        
+        <h1>Fibonacci Sequence</h1>
+        <table class="table_1">
+
+        </table>
+        <button onclick="fibonacci()">Magic</button>
+        <script>
+            var a=0;
+            var b=1;
+            var c=0;
+            tb=document.querySelector(".table_1");
+            fibonacci=function(){
+                tr1=document.createElement("tr");
+                td1=document.createElement("td");
+                c=a+b
+                td1.innerText=c;
+                tr1.appendChild(td1);
+                tb.appendChild(tr1);
+                a=b;
+                b=c;
+            }
+
+        </script>
+    </body>
+</html>

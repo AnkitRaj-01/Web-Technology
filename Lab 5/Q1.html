@@ -1,0 +1,40 @@
+<html>
+    <head>
+    <title>Q1</title>
+    <style>
+ 
+        .s{
+         width:fit-content;
+         position: relative;
+         animation-name: spin;
+         animation-duration: 2s;
+         animation-iteration-count:infinite;
+     }
+     
+     @keyframes spin{
+       from{
+         transform: rotate(0deg);
+       }
+       to{
+         transform: rotate(360deg);
+       }
+     }
+    </style>
+    </head>
+
+    <body>
+        <h2 id="change">Old Heading</h2>
+        <label for = "var">Enter Replacement:</label>
+        <input type = "text" id = "var"/><br>
+        <button onclick= "replace()">Magic</button>
+        
+        <script>
+            replace = function(){
+                
+                document.body.querySelector("#change").innerHTML= document.body.querySelector("#var").value;
+                document.body.querySelector("#change").className="s";
+            }
+        </script>
+
+    </body>
+</html>

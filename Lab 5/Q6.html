@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Q6</title>
+    </head>
+    <body>
+        <button onclick="newpage()">Click Here</button>
+        <script>
+            newpage=function(){
+                head1=document.createElement("h1");
+                head1.innerText="I am an h1";
+                document.body.appendChild(head1);
+                p=document.createElement("p");
+                p.innerText="This is a paragraph followed by a list";
+                document.body.appendChild(p);
+                O_list=document.createElement("ol");
+                lielem1=document.createElement("li");
+                lielem1.innerText="This is first";
+                lielem2=document.createElement("li");
+                lielem2.innerText="This is second";
+                O_list.appendChild(lielem1);
+                O_list.appendChild(lielem2);
+                document.body.appendChild(O_list);
+            }
+        </script>
+    </body>
+</html>

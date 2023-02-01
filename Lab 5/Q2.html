@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Q2</title>
+    </head>
+    
+    <body>
+        
+        <p class="count">
+            Count = 0.
+        </p>
+        <button onclick="increment()">Magic</button>
+        <script>
+            var i = 0;var j = 15;
+            increment=function(){
+                i = i+1;
+                var t=document.querySelector(".count")
+                var temp = 'Count = '+i+'.';
+                t.innerHTML = temp;
+                t.style.fontSize = j+"px";
+                j = j+10;
+      }
+        </script>
+
+    </body>
+</html>

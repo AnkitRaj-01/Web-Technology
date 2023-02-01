@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <style>
+      .box1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px;
+      }
+      .box2 {
+        width: 200px;
+        height: 40px;
+        font-size: 20px;
+        padding: 10px;
+        margin: 10px 0;
+        text-align: center;
+      }
+      .box3 {
+        font-size: 30px;
+        margin: 20px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1">
+      <label for="amount">Amount:</label>
+      <input type="number" id="amount" class="box2" />
+      <label for="tipPercentage">Tip Percentage:</label>
+      <input type="number" id="tipPercentage" class="box2" />
+      <label for="numPeople">Split Between:</label>
+      <input type="number" id="numPeople" class="box2" />
+      <button onclick="calculateTip()">Calculate Tip</button>
+    </div>
+    <div class="box3" id="box3"></div>
+    <script>
+      function calculateTip() {
+        var amount = document.getElementById("amount").value;
+        var tipPercentage = document.getElementById("tipPercentage").value;
+        var numPeople = document.getElementById("numPeople").value;
+        var tipAmount = (amount * tipPercentage) / 100;
+        var totalAmount = Number(amount) + Number(tipAmount);
+        var box3 = `Tip Amount: $${tipAmount.toFixed(2)}<br>
+                      Total Amount: $${totalAmount.toFixed(2)}<br>
+                      Amount Per Person: $${(totalAmount / numPeople).toFixed(2)}`;
+        document.getElementById("box3").innerHTML = box3;
+      }
+    </script>
+  </body>
+</html>
