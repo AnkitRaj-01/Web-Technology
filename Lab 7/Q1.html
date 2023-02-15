@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Q1</title>
+</head>
+<body>
+	<h1>Todo List</h1>
+	<input type="text" id="input-item">
+	<button id="add-btn">Update List</button>
+	<ul id="list-items"></ul>
+    <button onclick="clearAll()">Clear All</button>
+    <p>To reset the list click on the button and Refresh.</p>
+
+	<script>
+        clearAll = function(){
+            localStorage.clear();
+        }
+
+		const inputItem = document.getElementById('input-item');
+		const addBtn = document.getElementById('add-btn');
+		const listItems = document.getElementById('list-items');
+
+		const savedItems = localStorage.getItem('todoList');
+		if (savedItems) {
+			listItems.innerHTML = savedItems;
+		}
+
+		addBtn.addEventListener('click', () => {
+			const newListItem = document.createElement('li');
+			newListItem.innerText = inputItem.value;
+			listItems.appendChild(newListItem);
+			inputItem.value = '';
+
+			localStorage.setItem('todoList', listItems.innerHTML);
+		});
+	</script>
+</body>
+</html>

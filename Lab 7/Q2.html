@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Q2</title>
+</head>
+<body>
+	<h1>Todo List</h1>
+	<input type="text" id="input-item">
+	<button id="add-btn">Update List</button>
+	<ul id="list-items"></ul>
+    <h3 id="reload"></h3>
+
+	<script>
+
+        let count = localStorage.getItem('count') || 0;
+
+            count++;
+            localStorage.setItem('count', count);
+            document.getElementById("reload").innerHTML=`Page has been reloaded ${count} times.`;
+
+		
+		const inputItem = document.getElementById('input-item');
+		const addBtn = document.getElementById('add-btn');
+		const listItems = document.getElementById('list-items');
+		
+		const savedItems = localStorage.getItem('todoList');
+		if (savedItems) {
+			listItems.innerHTML = savedItems;
+		}
+
+		addBtn.addEventListener('click', () => {
+			const newListItem = document.createElement('li');
+			newListItem.innerText = inputItem.value;
+			listItems.appendChild(newListItem);
+			inputItem.value = '';
+
+			localStorage.setItem('todoList', listItems.innerHTML);
+		});
+	</script>
+</body>
+</html>
